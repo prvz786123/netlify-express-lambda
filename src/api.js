@@ -12,6 +12,12 @@ router.get('/',(req,res)=>{
     })
 })
 
+router.get('/test',(req,res)=>{
+    res.json({
+        msg:"This is test route"
+    })
+})
+
 app.use('/.netlify/functions/api',router);
 
 module.exports.handler = serverless(app)
